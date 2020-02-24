@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# iyouxiwang-frontend
-=======
 # iyouxiwang-frontend
 
 ## Project setup
