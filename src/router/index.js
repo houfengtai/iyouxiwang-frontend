@@ -21,8 +21,13 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'lottery',
-    component: resolve => require(['@/components/HelloWorld'], resolve)
+    name: 'index',
+    component: resolve => require(['@/components/home/index-page'], resolve)
+  },
+  {
+    path: '/index',
+    name: 'index',
+    component: resolve => require(['@/components/home/index-page'], resolve)
   },
   {
     path: '*',

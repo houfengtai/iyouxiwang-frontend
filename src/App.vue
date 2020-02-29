@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="web-style">
     <router-view/>
     <!--<foot-page/>-->
   </div>
@@ -154,7 +154,7 @@ export default {
   body{
     margin: 0px;
     padding:0px;
-    background: #f5f5f5;
+    background: #fff;
   }
   a{
     text-decoration: none;
