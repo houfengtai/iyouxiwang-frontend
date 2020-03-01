@@ -96,7 +96,7 @@ export default {
 </script>
 
 <style scoped>
-    .web-style .index-box{max-width:800px;padding: 0px 15px;background: #f5f5f5;margin: auto;}
+    .web-style .index-box{max-width:800px;padding: 0px 15px;background: #fafafa;margin: auto;}
     .web-style .data-row{height: 70px;width:100%;margin: auto;clear: both;cursor: pointer;border-bottom: 1px dashed #aaa;}
     .web-style .data-row h1{display: none;}
     .web-style .data-row .row-left{height: 60px;width:60px;margin: 5px 15px 5px 0;float:left;border-radius: 10px;}

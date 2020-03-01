@@ -1,15 +1,18 @@
 <template>
   <div id="app" class="web-style">
+    <nav-page/>
     <router-view/>
-    <!--<foot-page/>-->
+    <foot-page/>
   </div>
 </template>
 
 <script>
 import axios from 'axios'
-
+import NavPage from '@/components/public/nav-page'
+import FootPage from '@/components/public/foot-page'
 export default {
   name: 'app',
+  components: { FootPage, NavPage },
   created () {
     this._addInterceptors()
   },
