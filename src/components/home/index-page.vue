@@ -17,10 +17,10 @@ import dateUtil from '@/components/public/dateUtil.js'
 export default {
   name: 'index-page',
   metaInfo: {
-    title: '【爱游戏网】一个专注于各类棋牌|传奇|仙侠|端游|页游等公服和私服游戏收集网站',
+    title: '【爱游戏网】一个专注于各类娱乐|传奇|仙侠|端游|页游等公服和私服游戏收集网站',
     meta: [{
       name: 'keywords',
-      content: '爱游戏网,iyouxiwang.com,iyouxiwang,棋牌,捕鱼,传奇,私服，月入百万,游戏,赚钱,手游,网游,棋牌大全,游戏大全,优质游戏'
+      content: '爱游戏网,iyouxiwang.com,iyouxiwang,捕鱼,传奇,私服，月入百万,游戏,赚钱,手游,网游,游戏大全,优质游戏'
     }]
   },
   data () {
