@@ -1,6 +1,6 @@
 <template>
     <div class="index-box">
-        <div class="data-row" v-for="item in list" :key="item.id">
+        <div class="data-row" v-for="item in list" :key="item.id" @click="_redirect(item)">
             <h1>{{item.gameName}}</h1>
             <div class="row-left"><img :src="item.gameLogo"></div>
             <div class="row-right">
@@ -87,6 +87,11 @@ export default {
     },
     _setTimeLoading () {
       setTimeout(this._loading, 700) // 时间自定义
+    },
+    _redirect (item) {
+      axios.get(`/api/index/browselog/${item.id}`).then(res => {
+        if (res.data.code === 200) window.location.href = item.gameUrl
+      })
     }
   },
   mounted () {
