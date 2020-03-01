@@ -32,6 +32,7 @@ export default {
         margin: auto;
         position: relative;
         padding:0px 15px;
+        background: #fafafa;
     }
     .web-style .nav-box .nav-content{height: 50px;max-width: 800px;margin: auto;padding:0px 15px;}
     .web-style .tips:hover{
