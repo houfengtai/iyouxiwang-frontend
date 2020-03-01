@@ -90,7 +90,7 @@ export default {
     },
     _redirect (item) {
       axios.get(`/api/index/browselog/${item.id}`).then(res => {
-        if (res.data.code === 200) window.location.href = item.gameUrl
+        if (res.data.code === 200) window.open(item.gameUrl, '_blank')
       })
     }
   },
