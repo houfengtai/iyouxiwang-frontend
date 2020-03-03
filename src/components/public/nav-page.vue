@@ -7,6 +7,14 @@
                     <span class="size-normal">iyouxiwang.com</span>
                 </div>
             </div>
+            <!--<div>
+                <div>首页</div>
+                <div>更多</div>
+            </div>
+            <div>
+                <input placeholder="请输入要查询的游戏名称">
+                <span>查询</span>
+            </div>-->
         </div>
         <div class="clear-back"></div>
         <div class="tips">
@@ -33,6 +41,7 @@ export default {
         position: relative;
         padding:0px 15px;
         background: #fafafa;
+        z-index: -1;
     }
     .web-style .nav-box .nav-content{height: 50px;max-width: 800px;margin: auto;padding:0px 15px;}
     .web-style .tips:hover{

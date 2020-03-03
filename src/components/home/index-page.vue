@@ -90,7 +90,14 @@ export default {
     },
     _redirect (item) {
       axios.get(`/api/index/browselog/${item.id}`).then(res => {
-        if (res.data.code === 200) window.open(item.gameUrl, '_blank')
+        if (res.data.code === 200) {
+          let viewWidth = window.innerWidth ||
+                document.body.clientWidth ||
+                document.documentElement.clientWidth || 0
+          if (viewWidth > 500) {
+            window.open(item.gameUrl, '_blank')
+          } else window.location.href = item.gameUrl
+        }
       })
     }
   },
