@@ -157,7 +157,7 @@ export default {
   body{
     margin: 0px;
     padding:0px;
-    background: #fff;
+    background: #ecf0f1;
   }
   a{
     text-decoration: none;
