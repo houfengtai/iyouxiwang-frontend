@@ -36,7 +36,8 @@ export default {
   data () {
     return {
       newList: [],
-      hotList: []
+      hotList: [],
+      recommendList: []
     }
   },
   methods: {
@@ -49,11 +50,17 @@ export default {
       axios.get('/api/home/hot/games').then(res => {
         this.hotList = res.data.data
       })
+    },
+    _getRecommendList () {
+      axios.get('/api/home/recommend/games').then(res => {
+        this.recommendList = res.data.data
+      })
     }
   },
   mounted () {
     this._getNewList()
     this._getHotList()
+    this._getRecommendList()
   }
 }
 </script>
