@@ -39,16 +39,15 @@ export default {
 <style scoped>
     .web-style .nav-box{height:60px;width:100%;border-bottom: 1px solid #e5e5e5;
         background: #4a4a4a; /*5cb85c*/
-        position: fixed;
-        color:#666;
+        color:#fff;
         /*! autoprefixer: off */
-        background: -webkit-linear-gradient(top, #fff 0%, #ff8a00 100%) ;
+        background: -webkit-linear-gradient(top, #ffdd00 0%, #ff8a00 100%) ;
         /* autoprefixer: on */
-        background:-moz-linear-gradient(top, #fff 0%, #ff8a00 100%);
-        background:-o-linear-gradient(top, #fff 0%, #ff8a00 100%);
-        background:linear-gradient(top, #fff 0%, #ff8a00 100%);
+        background:-moz-linear-gradient(top, #ffdd00 0%, #ffaa00 100%);
+        background:-o-linear-gradient(top, #ffdd00 0%, #ff8a00 100%);
+        background:linear-gradient(top, #ffdd00 0%, #ff8a00 100%);
     }
-    .clear-back{height:60px;}
+    .clear-back{height:10px;}
     .web-style .tips{
         height:30px;line-height: 30px;
         max-width:800px;
