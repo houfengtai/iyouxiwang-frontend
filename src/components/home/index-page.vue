@@ -160,7 +160,7 @@ export default {
 .con-type-title div{width:calc(50%);float: left;text-indent: 1em;}
 .con-type-title div:first-child{width:calc(50% - 1px);border-right:1px solid #e5e5e5;}
 .con-type-row{height:120px;}
-.con-type-row .con-type-row-left,.con-type-row .con-type-row-right{float: left;width:calc(50% - 10px);height:120px;margin-left:10px;}
+.con-type-row .con-type-row-left,.con-type-row .con-type-row-right{float: left;width:calc(50% - 10px);height:120px;margin-left:10px;cursor: pointer;}
 .con-type-row .con-type-row-left:first-child{width:calc(50% - 11px);border-right:1px solid #e5e5e5;}
 .con-type-row-img-box{margin-top:10px;width: 60px;height: 60px;}
 .con-type-row-title-box{width:calc(100% - 85px);margin-left:10px;margin-top:5px;line-height:22px;}
