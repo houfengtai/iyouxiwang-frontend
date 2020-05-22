@@ -182,4 +182,6 @@ export default {
     height: 100%;
     z-index: 1;
   }
+  .float-left{float:left;}
+  .float-right{float:right;}
 </style>

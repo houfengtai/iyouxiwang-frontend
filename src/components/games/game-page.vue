@@ -14,6 +14,7 @@
 <script>
 import axios from 'axios'
 import dateUtil from '@/components/public/dateUtil.js'
+import httpUtil from '@/components/public/httpUtil'
 export default {
   name: 'game-page',
   metaInfo: {
@@ -88,17 +89,8 @@ export default {
     _setTimeLoading () {
       setTimeout(this._loading, 700) // 时间自定义
     },
-    _redirect (item) {
-      axios.get(`/api/index/browselog/${item.id}`).then(res => {
-        if (res.data.code === 200) {
-          let viewWidth = window.innerWidth ||
-                document.body.clientWidth ||
-                document.documentElement.clientWidth || 0
-          if (viewWidth > 500) {
-            window.open(item.gameUrl, '_blank')
-          } else window.location.href = item.gameUrl
-        }
-      })
+    _redirect (entity) {
+      httpUtil.redirect(entity.id, entity.gameUrl)
     }
   },
   mounted () {

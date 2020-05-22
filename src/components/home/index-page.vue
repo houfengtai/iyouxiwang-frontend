@@ -3,7 +3,7 @@
         <div class="label-row">
             <div class="label-font">最新游戏:</div>
             <div class="label-right">
-                <span class="label-box" v-for="(entity,index) in newList" :key="entity.id">
+                <span class="label-box" v-for="(entity,index) in newList" :key="entity.id" @click="_redirect(entity)">
                     <span class="split-line" v-if="index!=0">|</span>
                     <span class="label-name">{{entity.gameName}}</span>
                 </span>
@@ -13,7 +13,7 @@
         <div class="label-row">
             <div class="label-font red">热门游戏:</div>
             <div class="label-right">
-                <span class="label-box" v-for="(entity,index) in hotList" :key="entity.id">
+                <span class="label-box" v-for="(entity,index) in hotList" :key="entity.id" @click="_redirect(entity)">
                     <span class="split-line" v-if="index!=0">|</span>
                     <span class="label-name">{{entity.gameName}}</span>
                 </span>
@@ -23,7 +23,12 @@
         <div class="content-synthetical">
             <div class="content-sy-left">
                 <div><strong>手游推荐</strong><a href="#" class="a-other">更多>></a></div>
-                <div class="sy-left-cont"></div>
+                <div class="sy-left-cont">
+                    <div v-for="entity in recommendList" :key="entity.id" class="rec-box" @click="_redirect(entity)">
+                        <img :src="entity.gameLogo">
+                        <div><strong>{{entity.gameName}}</strong></div>
+                    </div>
+                </div>
             </div>
             <div class="content-sy-right">
                 <div><strong>游戏资讯</strong><a href="#" class="a-other">更多>></a></div>
@@ -52,13 +57,21 @@
                 <div>传奇</div>
             </div>
             <div class="con-type-row">
-                <div>
-                    <img src="/images/128qipai.png">
-                    <span>128娱乐</span>
+                <div class="con-type-row-left" @click="_redirect(typeGame.qp)">
+                    <div class="con-type-row-img-box float-left"><img class="game-log" width="60" height="60" :src="typeGame.qp.gameLogo"></div>
+                    <div class="con-type-row-title-box float-left">
+                        <div><strong>{{typeGame.qp.gameName}}</strong></div>
+                        <div>{{typeGame.qp.intro}}</div>
+                        <div>2020-05-19</div>
+                    </div>
                 </div>
-                <div>
-                    <img src="/images/dayingjia.png">
-                    <span>大赢家</span>
+                <div  class="con-type-row-right" @click="_redirect(typeGame.cq)">
+                    <div class="con-type-row-img-box float-left"><img class="game-log float-left" width="60" height="60" :src="typeGame.cq.gameLogo"></div>
+                    <div class="con-type-row-title-box float-left">
+                        <div><strong>{{typeGame.cq.gameName}}</strong></div>
+                        <div>{{typeGame.cq.intro}}</div>
+                        <div>2020-05-19</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -68,7 +81,7 @@
                 <a href="https://www.douyu.com/" target="_blank">斗鱼</a>
                 <a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a>
                 <a href="https://www.huya.com/" target="_blank">虎牙</a>
-                <a href="https://weibo.com/" target="_blank">新浪</a>
+                <a href="https://weibo.com/" target="_blank">新浪微博</a>
                 <a href="https://www.baidu.com/" target="_blank">百度</a>
                 <a href="https://www.taobao.com/" target="_blank">淘宝</a>
                 <a href="https://bbs.tianya.cn/" target="_blank">天涯社区</a>
@@ -81,13 +94,15 @@
 
 <script>
 import axios from 'axios'
+import httpUtil from '@/components/public/httpUtil'
 export default {
   name: 'index-page',
   data () {
     return {
       newList: [],
       hotList: [],
-      recommendList: []
+      recommendList: [],
+      typeGame: {}
     }
   },
   methods: {
@@ -105,12 +120,21 @@ export default {
       axios.get('/api/home/recommend/games').then(res => {
         this.recommendList = res.data.data
       })
+    },
+    _getTypeGameList () {
+      axios.get('/api/home/type/games').then(res => {
+        this.typeGame = res.data.data
+      })
+    },
+    _redirect (entity) {
+      httpUtil.redirect(entity.id, entity.gameUrl)
     }
   },
   mounted () {
     this._getNewList()
     this._getHotList()
     this._getRecommendList()
+    this._getTypeGameList()
   }
 }
 </script>
@@ -133,15 +157,20 @@ export default {
 .big-logo img{width:100%;max-width:800px;height:150px;}
 .content-type{clear: both;margin-top:10px;min-height:150px;border:1px solid #e5e5e5;}
 .con-type-title{height:40px;line-height:40px;border-bottom: 1px solid #e5e5e5;}
-.con-type-title div{width:calc(50% - 20px);float: left;text-indent: 1em;}
-.con-type-title div:first-child{width:calc(50% - 21px);border-right:1px solid #e5e5e5;}
-.con-type-row{height:120px;padding:0px 10px;}
-.con-type-row div{float: left;width:calc(50% - 20px);height:120px;}
-.con-type-row div:first-child{width:calc(50% - 21px);border-right:1px solid #e5e5e5;}
+.con-type-title div{width:calc(50%);float: left;text-indent: 1em;}
+.con-type-title div:first-child{width:calc(50% - 1px);border-right:1px solid #e5e5e5;}
+.con-type-row{height:120px;}
+.con-type-row .con-type-row-left,.con-type-row .con-type-row-right{float: left;width:calc(50% - 10px);height:120px;margin-left:10px;}
+.con-type-row .con-type-row-left:first-child{width:calc(50% - 11px);border-right:1px solid #e5e5e5;}
+.con-type-row-img-box{margin-top:10px;width: 60px;height: 60px;}
+.con-type-row-title-box{width:calc(100% - 85px);margin-left:10px;margin-top:5px;line-height:22px;}
 .a-other{float: right;}
 .external-link{margin-top:10px;padding-bottom:10px;}
 .margin-top10{margin-top:10px;}
 .sy-right-cont-row{width:100%;height:30px;line-height: 30px;border-bottom: 1px dashed #e5e5e5;}
 .external-link .el-row{height:40px;line-height:40px;}
 .el-link-box a{display: inline-block;margin: 0px 5px;}
+.game-log{width:60px;height: 60px;border:1px solid #e5e5e5;border-radius: 10px;}
+.rec-box{float:left;width:170px;height:130px;text-align: center;margin-top:15px;cursor: pointer;}
+.rec-box img{width:100px;height:100px;border:1px solid #e5e5e5;border-radius: 12px;}
 </style>
