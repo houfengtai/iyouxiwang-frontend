@@ -1,13 +1,18 @@
 import axios from 'axios'
 import httpUtil from '@/components/public/httpUtil'
+import NavPage from '@/components/public/nav-page'
 export default {
   name: 'index-page',
+  components: { NavPage },
   data () {
     return {
       newList: [],
       hotList: [],
       recommendList: [],
-      typeGame: {}
+      typeGame: {
+        qp: { gameLogo: '', gameName: '', intro: '' },
+        cq: { gameLogo: '', gameName: '', intro: '' }
+      }
     }
   },
   methods: {

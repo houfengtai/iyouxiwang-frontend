@@ -30,6 +30,11 @@ const routes = [
     component: resolve => require(['@/components/home/index-page'], resolve)
   },
   {
+    path: '/games',
+    name: 'games',
+    component: resolve => require(['@/components/games/game-page'], resolve)
+  },
+  {
     path: '*',
     component: resolve => require(['@/components/public/not-found'], resolve)
   }

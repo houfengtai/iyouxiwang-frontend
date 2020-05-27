@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="web-style">
-    <nav-page/>
     <router-view/>
     <foot-page/>
   </div>
@@ -8,11 +7,10 @@
 
 <script>
 import axios from 'axios'
-import NavPage from '@/components/public/nav-page'
 import FootPage from '@/components/public/foot-page'
 export default {
   name: 'app',
-  components: { FootPage, NavPage },
+  components: { FootPage },
   created () {
     this._addInterceptors()
   },

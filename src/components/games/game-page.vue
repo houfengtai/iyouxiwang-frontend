@@ -1,11 +1,14 @@
 <template>
-    <div class="index-box">
-        <div class="data-row" v-for="item in list" :key="item.id" @click="_redirect(item)">
-            <h1>{{item.gameName}}</h1>
-            <div class="row-left"><img :src="item.gameLogo"></div>
-            <div class="row-right">
-                <div class="row-title"><strong>{{item.gameName}}</strong><span class="time-box">更新于:{{_getDateTime()}}</span></div>
-                <div class="intro">{{item.intro}}</div>
+    <div>
+        <nav-page index="1"></nav-page>
+        <div class="index-box">
+            <div class="data-row" v-for="item in list" :key="item.id" @click="_redirect(item)">
+                <h1>{{item.gameName}}</h1>
+                <div class="row-left"><img :src="item.gameLogo"></div>
+                <div class="row-right">
+                    <div class="row-title"><strong>{{item.gameName}}</strong><span class="time-box">更新于:{{_getDateTime()}}</span></div>
+                    <div class="intro">{{item.intro}}</div>
+                </div>
             </div>
         </div>
     </div>
@@ -15,8 +18,10 @@
 import axios from 'axios'
 import dateUtil from '@/components/public/dateUtil.js'
 import httpUtil from '@/components/public/httpUtil'
+import NavPage from '@/components/public/nav-page'
 export default {
   name: 'game-page',
+  components: { NavPage },
   metaInfo: {
     title: '【爱游戏网】一个专注于各类娱乐|传奇|仙侠|端游|页游等公服和私服游戏收集网站',
     meta: [{
@@ -41,8 +46,8 @@ export default {
   methods: {
     _initData () {
       if (this.isLoading) {
-        let param = `pageIndex=${this.pageRequest.pageIndex}&pageSize=${this.pageRequest.pageSize}` + (this.keyword === '' ? '' : `&keyword=${this.keyword}`) + (this.type === -1 ? '' : `&type=${this.type}`)
-        axios.get(`/api/index/games?${param}`).then(res => {
+        let param = `pageIndex=${this.pageRequest.pageIndex}&pageSize=${this.pageRequest.pageSize}` + (this.keyword === '' ? '' : `&k=${this.keyword}`) + (this.type === -1 ? '' : `&t=${this.type}`)
+        axios.get(`/api/game/games?${param}`).then(res => {
           this.pageRequest.pageIndex = res.data.pageIndex
           this.pageRequest.pageNo = res.data.pageNo
           this.pageRequest.pageSize = res.data.pageSize

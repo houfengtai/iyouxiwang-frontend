@@ -7,9 +7,7 @@
                     <span class="size-normal">iyouxiwang.com</span>
                 </div>
                 <div class="nav-list">
-                    <div>首页</div>
-                    <div>游戏</div>
-                    <div>商务合作</div>
+                    <div v-for="(entity, i) in urls" :key="entity.id" :class="{'is-selected':index==i}" @click="_goUrl(i)">{{entity.label}}</div>
                 </div>
                 <!--<div>
                     <input placeholder="请输入要查询的游戏名称">
@@ -18,9 +16,6 @@
             </div>
         </div>
         <div class="clear-back"></div>
-        <!--<div class="tips">
-            <span class="header-marquee-item">免责声明：本站所有的游戏均来源于网友投稿，如出现侵权，请联系我们进行删除；对于是否下载请自行选择，如出现损失，本站概不负责！</span>
-        </div>-->
     </div>
 </template>
 
@@ -29,10 +24,22 @@ export default {
   name: 'nav-page',
   data () {
     return {
-
+      isSelected: 'is-selected',
+      urls: [
+        { label: '首页', url: '/index', img: '' },
+        { label: '游戏', url: '/games', img: '' },
+        { label: '商务合作', url: 'https://iyouxiwang.com', img: '' }
+      ]
     }
   },
-  props: ['url', 'index']
+  props: ['url', 'index'],
+  methods: {
+    _goUrl (n) {
+      location.href = this.urls[n].url
+    }
+  },
+  mounted () {
+  }
 }
 </script>
 
@@ -98,4 +105,5 @@ export default {
         height: 60px;
     }
     .nav-list div:hover{background: #ff8a00;cursor: pointer;color: #fff;}
+    .is-selected{background: #ff8a00;}
 </style>
