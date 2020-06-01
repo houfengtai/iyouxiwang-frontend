@@ -9,10 +9,6 @@
                 <div class="nav-list">
                     <div v-for="(entity, i) in urls" :key="entity.id" :class="{'is-selected':index==i}" @click="_goUrl(i)">{{entity.label}}</div>
                 </div>
-                <!--<div>
-                    <input placeholder="请输入要查询的游戏名称">
-                    <span>查询</span>
-                </div>-->
             </div>
         </div>
         <div class="clear-back"></div>
@@ -28,7 +24,7 @@ export default {
       urls: [
         { label: '首页', url: '/index', img: '' },
         { label: '游戏', url: '/games', img: '' },
-        { label: '商务合作', url: 'https://iyouxiwang.com', img: '' }
+        { label: '商务合作', url: '/cooperation', img: '' }
       ]
     }
   },

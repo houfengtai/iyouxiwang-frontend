@@ -1,0 +1,19 @@
+.web-style .index-box{max-width:800px;padding: 0px 15px;background: #fff;margin: auto;}
+.web-style .data-row{height: 70px;width:100%;margin: auto;clear: both;cursor: pointer;border-bottom: 1px dashed #aaa;}
+.web-style .data-row h1{display: none;}
+.web-style .data-row .row-left{height: 60px;width:60px;margin: 5px 15px 5px 0;float:left;border-radius: 10px;}
+.web-style .data-row .row-left img{width: 60px;height:60px;border-radius: 10px;}
+.web-style .data-row .row-right{height: 70px;width:calc(100% - 75px);float:left;}
+.web-style .data-row .row-right .intro,.web-style .data-row .row-right .row-title{
+  height: 35px;
+  line-height:35px;
+  width:100%;
+  white-space: nowrap;/* 内容过长显示两行，多余为省略号 */
+  text-overflow:ellipsis;/*设置隐藏部分为省略号*/
+  overflow: hidden;/*设置隐藏*/
+  font-size: 14px;
+}
+.web-style .data-row .row-right .row-title strong{
+  height:35px;line-height: 35px;font-size: 16px;
+}
+.web-style .data-row .row-right .time-box{float: right;color:red;}
