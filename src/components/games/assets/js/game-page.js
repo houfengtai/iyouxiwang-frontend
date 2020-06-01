@@ -23,7 +23,8 @@ export default {
       total: 0,
       keyword: '',
       type: -1,
-      isLoading: true
+      isLoading: true,
+      queryInfo: { c: null, t: null, k: null }
     }
   },
   methods: {

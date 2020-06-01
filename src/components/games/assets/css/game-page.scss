@@ -1,4 +1,4 @@
-.web-style .index-box{max-width:800px;padding: 0px 15px;background: #fff;margin: auto;}
+.web-style .index-box{max-width:800px;padding: 10px 15px;background: #fff;margin: auto;}
 .web-style .data-row{height: 70px;width:100%;margin: auto;clear: both;cursor: pointer;border-bottom: 1px dashed #aaa;}
 .web-style .data-row h1{display: none;}
 .web-style .data-row .row-left{height: 60px;width:60px;margin: 5px 15px 5px 0;float:left;border-radius: 10px;}
@@ -17,3 +17,15 @@
   height:35px;line-height: 35px;font-size: 16px;
 }
 .web-style .data-row .row-right .time-box{float: right;color:red;}
+.web-style .label-row{clear: both;min-height:35px;}
+.web-style .label-row label{display: inline-block;margin:5px 8px;padding: 2px 10px;cursor: pointer;}
+.web-style .label-row label:hover{background:#ff8a00;color:#fff;}
+.web-style .label-row label.checked{background:#ff8a00;color:#fff;}
+.web-style .label-font{float:left;width:50px;line-height:35px;}
+.web-style .label-right{width: calc(100% - 50px);float: right;}
+.web-style .search-box{float:right;width:250px;height:35px;line-height:35px;}
+.web-style .search-box input{width:213px;height:32px;line-height: 32px;border:1px solid #e5e5e5;text-indent: 1em;}
+.web-style .search-box:hover input{border:1px solid #ff8a00;}
+.web-style .search-box .search-but{display: inline-block;background:url("../images/search.svg") repeat 0 center;
+  border:1px solid #e5e5e5;width:34px;height: 34px;cursor: pointer;border-left:0px;float:right;margin-top:0px;}
+.web-style .search-box:hover .search-but{background:url("../images/search-h.svg") repeat 0 center;border:1px solid #ff8a00;border-left:0px;}
