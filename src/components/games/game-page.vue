@@ -3,7 +3,7 @@
         <nav-page index="1"></nav-page>
         <div class="index-box">
             <div class="label-row">
-                <div class="label-font">分类：</div>
+                <div class="label-font"><img src="./assets/images/classify.svg">分类：</div>
                 <div class="label-right">
                     <span>
                         <label>手游</label>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="label-row">
-                <div class="label-font">标签：</div>
+                <div class="label-font"><img src="./assets/images/label.svg">标签：</div>
                 <div class="label-right">
                     <span>
                         <label>休闲棋牌</label>

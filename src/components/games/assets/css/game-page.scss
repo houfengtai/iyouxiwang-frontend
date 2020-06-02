@@ -21,8 +21,9 @@
 .web-style .label-row label{display: inline-block;margin:5px 8px;padding: 2px 10px;cursor: pointer;}
 .web-style .label-row label:hover{background:#ff8a00;color:#fff;}
 .web-style .label-row label.checked{background:#ff8a00;color:#fff;}
-.web-style .label-font{float:left;width:50px;line-height:35px;}
-.web-style .label-right{width: calc(100% - 50px);float: right;}
+.web-style .label-font{float:left;width:70px;line-height:35px;}
+.web-style .label-font img{width:20px;height:20px;margin-right:5px;float:left;margin-top:7px;}
+.web-style .label-right{width: calc(100% - 70px);float: right;}
 .web-style .search-box{float:right;width:250px;height:35px;line-height:35px;}
 .web-style .search-box input{width:213px;height:32px;line-height: 32px;border:1px solid #e5e5e5;text-indent: 1em;}
 .web-style .search-box:hover input{border:1px solid #ff8a00;}

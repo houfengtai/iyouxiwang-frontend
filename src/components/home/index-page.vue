@@ -3,7 +3,7 @@
         <nav-page index="0"></nav-page>
         <div class="index-box">
             <div class="label-row">
-                <div class="label-font">最新游戏:</div>
+                <div class="label-font"><img src="./assets/images/new.svg">最新:</div>
                 <div class="label-right">
                 <span class="label-box" v-for="(entity,index) in newList" :key="entity.id" @click="_redirect(entity)">
                     <span class="split-line" v-if="index!=0">|</span>
@@ -13,7 +13,7 @@
                 <div class="clear"></div>
             </div>
             <div class="label-row">
-                <div class="label-font red">热门游戏:</div>
+                <div class="label-font red"><img src="./assets/images/hot.svg">热门:</div>
                 <div class="label-right">
                 <span class="label-box" v-for="(entity,index) in hotList" :key="entity.id" @click="_redirect(entity)">
                     <span class="split-line" v-if="index!=0">|</span>
@@ -24,7 +24,7 @@
             </div>
             <div class="content-synthetical">
                 <div class="content-sy-left">
-                    <div><strong>手游推荐</strong><a href="#" class="a-other">更多>></a></div>
+                    <div class="col-title"><img class="rec" src="./assets/images/rec.svg"><strong>手游推荐</strong><a href="#" class="a-other">更多>></a></div>
                     <div class="sy-left-cont">
                         <div v-for="entity in recommendList" :key="entity.id" class="rec-box" @click="_redirect(entity)">
                             <img :src="entity.gameLogo">
@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="content-sy-right">
-                    <div><strong>游戏资讯</strong><a href="#" class="a-other">更多>></a></div>
+                    <div class="col-title"><img class="rec" src="./assets/images/info.svg"><strong>游戏资讯</strong><a href="#" class="a-other">更多>></a></div>
                     <div class="sy-right-cont">
                         <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
                         <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
@@ -52,7 +52,7 @@
             <div class="big-logo">
                 <img src="/images/big-qiushenjindi.png">
             </div>
-            <div class="margin-top10"><strong>游戏分类</strong><a href="/games" class="a-other">更多>></a></div>
+            <div class="margin-top10 col-title"><img class="rec" src="./assets/images/classify.svg"><strong>游戏分类</strong><a href="/games" class="a-other">更多>></a></div>
             <div class="content-type">
                 <div class="con-type-title">
                     <div>休闲棋牌</div>
@@ -75,6 +75,7 @@
                             <div>2020-05-19</div>
                         </div>
                     </div>
+                    <div class="clear"></div>
                 </div>
             </div>
             <div class="external-link">
