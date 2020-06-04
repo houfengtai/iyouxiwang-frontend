@@ -6,12 +6,10 @@
                 <div class="label-font"><img src="./assets/images/classify.svg">分类：</div>
                 <div class="label-right">
                     <span>
-                        <label>手游</label>
-                        <label>端游</label>
-                        <label>页游</label>
+                        <label v-for="(e, i) in columnType" :key="e.id" @click="_checkedColumnType(i)">{{e.name}}</label>
                     </span>
                     <div class="search-box">
-                        <input :value="queryInfo.k" placeholder="搜索你喜欢的游戏">
+                        <input v-model="queryInfo.k" placeholder="搜索你喜欢的游戏">
                         <span class="search-but" title="查询"></span>
                     </div>
                 </div>
@@ -20,15 +18,11 @@
                 <div class="label-font"><img src="./assets/images/label.svg">标签：</div>
                 <div class="label-right">
                     <span>
-                        <label>休闲棋牌</label>
-                        <label>传奇</label>
-                        <label>仙侠</label>
-                        <label>射击</label>
-                        <label>竞技</label>
-                        <label>益智</label>
+                        <label v-for="(e, i) in gameTypes" :key="e.id" @click="_checkedGameType(i)">{{e.name}}</label>
                     </span>
                 </div>
             </div>
+            <div class="split-line"></div>
             <div class="data-row" v-for="item in list" :key="item.id" @click="_redirect(item)">
                 <h1>{{item.gameName}}</h1>
                 <div class="row-left"><img :src="item.gameLogo"></div>

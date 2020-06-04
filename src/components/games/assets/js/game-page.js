@@ -24,7 +24,24 @@ export default {
       keyword: '',
       type: -1,
       isLoading: true,
-      queryInfo: { c: null, t: null, k: null }
+      queryInfo: { c: null, t: null, k: null },
+      columnType: [
+        { id: 0, name: '手游' },
+        { id: 1, name: '页游' },
+        { id: 2, name: '端游' }
+      ],
+      gameTypes: [
+        { id: 0, name: '休闲棋牌' },
+        { id: 1, name: '传奇' },
+        { id: 2, name: '仙侠' },
+        { id: 3, name: '射击' },
+        { id: 4, name: '竞技' },
+        { id: 5, name: '益智' },
+        { id: 6, name: '模拟' },
+        { id: 7, name: '格斗' },
+        { id: 8, name: '回合' },
+        { id: 9, name: '策略' }
+      ]
     }
   },
   methods: {
@@ -80,6 +97,12 @@ export default {
     },
     _redirect (entity) {
       httpUtil.redirect(entity.id, entity.gameUrl)
+    },
+    _checkedColumnType (i) {
+
+    },
+    _checkedGameType (i) {
+
     }
   },
   mounted () {

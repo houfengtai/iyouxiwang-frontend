@@ -24,6 +24,7 @@ export default {
       urls: [
         { label: '首页', url: '/index', img: '' },
         { label: '游戏', url: '/games', img: '' },
+        { label: '论坛', url: '/', img: '' },
         { label: '商务合作', url: '/cooperation', img: '' }
       ]
     }
