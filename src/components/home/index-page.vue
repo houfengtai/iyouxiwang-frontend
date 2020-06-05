@@ -82,9 +82,17 @@
                 <img class="rec" src="./assets/images/img.svg">
                 <strong>荣誉墙</strong>
             </div>
+            <div class="game-img-box">
+                <img v-for="(e,i) in views.images" :key="e.id" :src="e.resourceUrl" :title="e.remark" ref="honor" @click="_enlargement(i)">
+            </div>
             <div class="margin-top10 col-title">
                 <img class="rec" src="./assets/images/video.svg">
                 <strong>高光操作</strong>
+            </div>
+            <div class="video-box">
+                <video v-for="e in views.videos" :key="e.id" controls controlslist="nodownload noremoteplayback" ref="video" disablePictureInPicture="true">
+                    <source :src="e.resourceUrl" type="video/mp4">
+                </video>
             </div>
             <div class="external-link">
                 <div class="el-row"><strong>友情链接>></strong></div>

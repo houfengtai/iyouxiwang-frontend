@@ -35,3 +35,9 @@
 .rec-box img{width:100px;height:100px;border:1px solid #e5e5e5;border-radius: 12px;}
 img.rec{width:20px;height:20px;float:left;margin-top:5px;margin-right:5px;}
 .col-title{height:30px;line-height:30px;clear:both;}
+.video-box{width:100%;}
+.video-box video{width:calc(100% / 3 - 7px);max-width:100%;margin-left:10px;object-fit: fill;height:150px;max-height:100%;}
+.video-box video:first-child{margin-left:0px;}
+.game-img-box{width:100%;}
+.game-img-box img{width:calc(100% / 3 - 7px);max-width:100%;margin-left:10px;max-height:100%;cursor: pointer;}
+.game-img-box img:first-child{margin-left:0px;}

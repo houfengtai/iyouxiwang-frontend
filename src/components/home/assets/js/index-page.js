@@ -12,6 +12,10 @@ export default {
       typeGame: {
         qp: { gameLogo: '', gameName: '', intro: '' },
         cq: { gameLogo: '', gameName: '', intro: '' }
+      },
+      views: {
+        images: [],
+        videos: []
       }
     }
   },
@@ -36,8 +40,23 @@ export default {
         this.typeGame = res.data.data
       })
     },
+    _getGameViewsList () {
+      axios.get('/api/home/games/view').then(res => {
+        this.views = res.data.data
+      })
+    },
     _redirect (entity) {
       httpUtil.redirect(entity.id, entity.gameUrl)
+    },
+    _enlargement (i) {
+      const honors = this.$refs.honor
+      if (honors[i].width === 800) {
+        honors[i].style.width = 'calc(100% / 3 - 7px)'
+        if (i !== 0) honors[i].style.marginLeft = '10px'
+      } else {
+        honors[i].style.width = '100%'
+        if (i !== 0) honors[i].style.marginLeft = '0px'
+      }
     }
   },
   mounted () {
@@ -45,5 +64,6 @@ export default {
     this._getNewList()
     this._getHotList()
     this._getTypeGameList()
+    this._getGameViewsList()
   }
 }
