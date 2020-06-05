@@ -35,6 +35,11 @@ const routes = [
     component: resolve => require(['@/components/games/game-page'], resolve)
   },
   {
+    path: '/forum',
+    name: 'forum',
+    component: resolve => require(['@/components/forum/forum-page'], resolve)
+  },
+  {
     path: '*',
     component: resolve => require(['@/components/public/not-found'], resolve)
   }

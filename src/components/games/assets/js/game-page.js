@@ -99,10 +99,10 @@ export default {
       httpUtil.redirect(entity.id, entity.gameUrl)
     },
     _checkedColumnType (i) {
-
+      this.queryInfo.c = i
     },
     _checkedGameType (i) {
-
+      this.queryInfo.t = i
     }
   },
   mounted () {
