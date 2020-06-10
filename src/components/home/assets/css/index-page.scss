@@ -1,3 +1,4 @@
+/** PC端样式 **/
 .web-style .label-row{clear: both;min-height:30px;}
 .web-style .label-font{color:#ff8a00;float:left;width:75px;}
 .web-style .label-right{width: calc(100% - 75px);float: right;}
@@ -41,7 +42,7 @@
 .web-style .game-img-box img{width:calc(100% / 3 - 7px);max-width:100%;margin-left:10px;max-height:100%;cursor: pointer;}
 .web-style .game-img-box img:first-child{margin-left:0px;}
 
-
+/** 移动端样式 **/
 .m-style .label-row{clear: both;min-height:40px;margin-bottom: 10px;border-bottom:1px solid #e5e5e5;padding: 0px 0px 10px 0px;}
 .m-style .label-font{color:#ff8a00;width:75px;height:21px;font-weight: bolder;}
 .m-style .label-font span{display: none;}
