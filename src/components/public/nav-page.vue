@@ -41,7 +41,7 @@ export default {
 </script>
 
 <style scoped>
-    .web-style .nav-box{height:60px;width:100%;border-bottom: 1px solid #e5e5e5;
+    .nav-box{height:60px;width:100%;border-bottom: 1px solid #e5e5e5;
         background: #4a4a4a; /*5cb85c*/
         color:#fff;
         /*! autoprefixer: off */
@@ -52,55 +52,14 @@ export default {
         background:linear-gradient(top, #ffdd00 0%, #ff8a00 100%);
     }
     .clear-back{height:10px;}
-    .web-style .tips{
-        height:30px;line-height: 30px;
-        max-width:800px;
-        overflow: hidden;
-        animation: marquee 15s linear infinite;
-        margin: auto;
-        position: relative;
-        padding:0px 15px;
-        background: #fafafa;
-        z-index: -1;
-    }
-    .web-style .nav-box .nav-content{height: 50px;max-width: 800px;margin: auto;padding:0px 15px;}
-    .web-style .tips:hover{
-        animation-play-state: paused;
-    }
-    .web-style .tips .header-marquee-item {
-        position: absolute;
-        top: 0;
-        left: 0;
-        white-space: nowrap;
-    }
-    /* Make it move */
-    @keyframes marquee {
-        0% {
-            text-indent: 27.5em;
-        }
-        100% {
-            text-indent: -105em;
-        }
-    }
-    .web-logo{
-        width:120px;
-        float:left;
-        left:-15px;
-    }
-    .size-normal{
-        font-size: 14px;
-    }
-    .size-big{
-        margin-top:5px;
-        font-size: 25px;
-    }
+    .nav-box .nav-content{height: 60px;max-width: 800px;margin: auto;padding:0px 15px;}
+    .web-style .web-logo{ width:120px; float:left; left:-15px; }
+    .m-style .web-logo{ width:0px; float:left; left:-15px; display: none;}
+    .size-normal{ font-size: 14px; }
+    .size-big{ margin-top:5px; font-size: 25px; }
     .nav-list{float: left;font-size:16px;}
-    .nav-list div{
-        float: left;
-        padding: 0px 15px;
-        line-height: 60px;
-        height: 60px;
-    }
-    .nav-list div:hover{background: #ff8a00;cursor: pointer;color: #fff;}
+    .web-style .nav-list div{ float: left; padding: 0px 15px; line-height: 60px; height: 60px; }
+    .m-style .nav-list div{ float: left; padding: 0px 10px; line-height: 60px; height: 60px; }
+    .web-style .nav-list div:hover{background: #ff8a00;cursor: pointer;color: #fff;}
     .is-selected{background: #ff8a00;}
 </style>

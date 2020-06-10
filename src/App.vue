@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="web-style">
+  <div id="app" :class="{'web-style':!isMobile,'m-style':isMobile}">
     <router-view/>
     <foot-page/>
   </div>
@@ -11,6 +11,11 @@ import FootPage from '@/components/public/foot-page'
 export default {
   name: 'app',
   components: { FootPage },
+  data () {
+    return {
+      isMobile: document.body.clientWidth < 800
+    }
+  },
   created () {
     this._addInterceptors()
   },
@@ -20,6 +25,15 @@ export default {
     }
   },
   methods: {
+    _onresize () {
+      // const that = this
+      window.onresize = () => {
+        return (() => {
+          const screenWidth = document.body.clientWidth
+          if (screenWidth < 800) { this.isMobile = true } else this.isMobile = false
+        })()
+      }
+    },
     _routeChanged (to, from) {
       this._dealAndroidInputMethodProblem()
     },
@@ -138,6 +152,7 @@ export default {
        */
     this._dealAndroidInputMethodProblem()
     this._onresizeAndroidScreen()
+    this._onresize()
   }
 }
 </script>
