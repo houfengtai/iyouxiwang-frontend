@@ -3,7 +3,7 @@
         <nav-page index="0"></nav-page>
         <div class="index-box">
             <div class="label-row">
-                <div class="label-font"><img src="./assets/images/new.svg">最新:</div>
+                <div class="label-font"><img src="./assets/images/new.svg">最新<span>:</span></div>
                 <div class="label-right">
                 <span class="label-box" v-for="(entity,index) in newList" :key="entity.id" @click="_redirect(entity)">
                     <span class="split-line" v-if="index!=0">|</span>
@@ -13,7 +13,7 @@
                 <div class="clear"></div>
             </div>
             <div class="label-row">
-                <div class="label-font red"><img src="./assets/images/hot.svg">热门:</div>
+                <div class="label-font red"><img src="./assets/images/hot.svg">热门<span>:</span></div>
                 <div class="label-right">
                 <span class="label-box" v-for="(entity,index) in hotList" :key="entity.id" @click="_redirect(entity)">
                     <span class="split-line" v-if="index!=0">|</span>

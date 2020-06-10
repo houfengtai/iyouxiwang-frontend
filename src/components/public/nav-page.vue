@@ -51,7 +51,7 @@ export default {
         background:-o-linear-gradient(top, #ffdd00 0%, #ff8a00 100%);
         background:linear-gradient(top, #ffdd00 0%, #ff8a00 100%);
     }
-    .clear-back{height:10px;}
+    .clear-back{height:0px;}
     .nav-box .nav-content{height: 60px;max-width: 800px;margin: auto;padding:0px 15px;}
     .web-style .web-logo{ width:120px; float:left; left:-15px; }
     .m-style .web-logo{ width:0px; float:left; left:-15px; display: none;}
