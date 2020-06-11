@@ -31,7 +31,7 @@ export default {
         { id: 2, name: '端游' }
       ],
       gameTypes: [
-        { id: 0, name: '休闲棋牌' },
+        { id: 0, name: '棋牌' },
         { id: 1, name: '传奇' },
         { id: 2, name: '仙侠' },
         { id: 3, name: '射击' },

@@ -1,3 +1,4 @@
+/** PC端样式 **/
 .web-style .index-box{max-width:800px;padding: 10px 15px;background: #fff;margin: auto;}
 .web-style .data-row{height: 70px;width:100%;margin: auto;clear: both;cursor: pointer;border-bottom: 1px dashed #aaa;}
 .web-style .data-row h1{display: none;}
@@ -32,3 +33,40 @@
 .web-style .search-box:hover .search-but{background:url("../images/search-h.svg") repeat 0 center;border:1px solid #ff8a00;border-left:0px;}
 .web-style .split-line{clear: both;margin: 5px 0px;border-bottom: 1px solid #e5e5e5;}
 .web-style .col-av{height:35px;line-height:35px;background:red;}
+
+/** 移动端样式 **/
+.m-style .index-box{max-width:800px;padding: 10px 15px;background: #fff;margin: auto;}
+.m-style .data-row{height: 70px;width:100%;margin: auto;clear: both;cursor: pointer;border-bottom: 1px dashed #aaa;}
+.m-style .data-row h1{display: none;}
+.m-style .data-row .row-left{height: 60px;width:60px;margin: 5px 15px 5px 0;float:left;border-radius: 10px;}
+.m-style .data-row .row-left img{width: 60px;height:60px;border-radius: 10px;}
+.m-style .data-row .row-right{height: 70px;width:calc(100% - 75px);float:left;}
+.m-style .data-row .row-right .intro,.m-style .data-row .row-right .row-title{
+  height: 35px;
+  line-height:35px;
+  width:100%;
+  white-space: nowrap;/* 内容过长显示两行，多余为省略号 */
+  text-overflow:ellipsis;/*设置隐藏部分为省略号*/
+  overflow: hidden;/*设置隐藏*/
+  font-size: 14px;
+}
+.m-style .data-row .row-right .row-title strong{
+  height:35px;line-height: 35px;font-size: 16px;
+}
+.m-style .data-row .row-right .time-box{float: right;color:red;}
+.m-style .label-row{clear: both;min-height:40px;margin-bottom: 10px;border-bottom:1px solid #e5e5e5;padding: 0px 0px 10px 0px;}
+.m-style .label-row label{display: inline-block;padding: 2px 10px;cursor: pointer;}
+.m-style .label-row label:hover{background:#ff8a00;color:#fff;}
+.m-style .label-row label.checked{background:#ff8a00;color:#fff;}
+.m-style .label-font{width:75px;height:21px;font-weight: bolder;}
+.m-style .label-font span{display: none;}
+.m-style .label-font img{width:20px;height:20px;margin-right:5px;float:left;}
+.m-style .label-box{color:#666;display: inline-block;min-width:85px;text-align: center;margin:0px;padding: 0px;margin:5px 0px;}
+.m-style .label-right{width: 100%;}
+.m-style .search-box{width:100%;height:40px;line-height:40px;position: absolute;text-align: center;background: red;left:0;top:60px;}
+.m-style .search-box div{width:300px;height:32px;margin: 4px auto;}
+.m-style .search-box input{width:250px;height:30px;line-height: 30px;text-indent: 1em;border-bottom-left-radius: 16px;border-top-left-radius: 16px;border:0px;float:left;}
+.m-style .search-box input:hover{border:0px;}
+.m-style .search-box .search-but{display: inline-block;background:url("../images/search.svg") no-repeat center center #fff;
+  border:0px;width:50px;height: 32px;cursor: pointer;border-bottom-right-radius: 16px;border-top-right-radius: 16px;float:left;}
+.m-style .col-av{height:35px;line-height:35px;background:red;}

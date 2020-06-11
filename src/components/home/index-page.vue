@@ -5,8 +5,7 @@
             <div class="label-row">
                 <div class="label-font"><img src="./assets/images/new.svg">最新<span>:</span></div>
                 <div class="label-right">
-                <span class="label-box" v-for="(entity,index) in newList" :key="entity.id" @click="_redirect(entity)">
-                    <span class="split-line" v-if="index!=0">|</span>
+                <span class="label-box" v-for="entity in newList" :key="entity.id" @click="_redirect(entity)">
                     <span class="label-name">{{entity.gameName}}</span>
                 </span>
                 </div>

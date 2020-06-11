@@ -3,22 +3,24 @@
         <nav-page index="1"></nav-page>
         <div class="index-box">
             <div class="label-row">
-                <div class="label-font"><img src="./assets/images/classify.svg">分类：</div>
+                <div class="label-font"><img src="./assets/images/classify.svg">分类<span>：</span></div>
                 <div class="label-right">
-                    <span>
-                        <label v-for="(e, i) in columnType" :key="e.id" :class="{'checked':e.id === queryInfo.c}" @click="_checkedColumnType(i)">{{e.name}}</label>
+                    <span class="label-box" v-for="(e, i) in columnType" :key="e.id">
+                        <label :class="{'checked':e.id === queryInfo.c}" @click="_checkedColumnType(i)">{{e.name}}</label>
                     </span>
                     <div class="search-box">
-                        <input v-model="queryInfo.k" placeholder="搜索你喜欢的游戏">
-                        <span class="search-but" title="查询"></span>
+                        <div>
+                            <input v-model="queryInfo.k" placeholder="搜索你喜欢的游戏">
+                            <span class="search-but" title="查询"></span>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="label-row">
-                <div class="label-font"><img src="./assets/images/label.svg">标签：</div>
+                <div class="label-font"><img src="./assets/images/label.svg">标签<span>：</span></div>
                 <div class="label-right">
-                    <span>
-                        <label v-for="(e, i) in gameTypes" :key="e.id" :class="{'checked':e.id === queryInfo.t}" @click="_checkedGameType(i)">{{e.name}}</label>
+                    <span class="label-box" v-for="(e, i) in gameTypes" :key="e.id">
+                        <label :class="{'checked':e.id === queryInfo.t}" @click="_checkedGameType(i)">{{e.name}}</label>
                     </span>
                 </div>
             </div>
