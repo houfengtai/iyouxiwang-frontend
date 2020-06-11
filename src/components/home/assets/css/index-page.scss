@@ -1,11 +1,11 @@
 /** PC端样式 **/
-.web-style .label-row{clear: both;min-height:30px;}
+.web-style .label-row{clear: both;min-height:30px;padding-bottom: 10px;}
 .web-style .label-font{color:#ff8a00;float:left;width:75px;}
 .web-style .label-right{width: calc(100% - 75px);float: right;}
 .web-style .label-font img{width:20px;height:20px;margin-right:5px;float:left;}
 .web-style .red{color:red;}
-.web-style .label-box{color:#666;}
-.web-style .split-line{margin: 0px 5px;color:#ccc;display: inline-block;}
+.web-style .label-box{color:#666;display: inline-block;min-width:100px;margin:0px;padding: 0px;}
+.web-style .split-line{display: none;}
 .web-style .label-name{cursor: pointer;color:#999;display: inline-block;}
 .web-style .label-box .label-name:hover{color:#09befe;}
 .web-style .content-synthetical{min-height: 320px;padding-top:10px;border-top:1px solid #e5e5e5;clear: both;}
