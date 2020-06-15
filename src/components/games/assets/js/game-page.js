@@ -21,8 +21,6 @@ export default {
         pageSize: 10
       },
       total: 0,
-      keyword: '',
-      type: -1,
       isLoading: true,
       queryInfo: { c: null, t: null, k: null },
       columnType: [
@@ -41,13 +39,17 @@ export default {
         { id: 7, name: '格斗' },
         { id: 8, name: '回合' },
         { id: 9, name: '策略' }
-      ]
+      ],
+      isOpen: true
     }
   },
   methods: {
     _initData () {
       if (this.isLoading) {
-        let param = `pageIndex=${this.pageRequest.pageIndex}&pageSize=${this.pageRequest.pageSize}` + (this.keyword === '' ? '' : `&k=${this.keyword}`) + (this.type === -1 ? '' : `&t=${this.type}`)
+        let param = `pageIndex=${this.pageRequest.pageIndex}&pageSize=${this.pageRequest.pageSize}` +
+            (this.queryInfo.c == null ? '' : `&c=${this.queryInfo.c}`) +
+            (this.queryInfo.t == null ? '' : `&t=${this.queryInfo.t}`) +
+            (this.queryInfo.k == null ? '' : `&k=${this.queryInfo.k}`)
         axios.get(`/api/game/games?${param}`).then(res => {
           this.pageRequest.pageIndex = res.data.pageIndex
           this.pageRequest.pageNo = res.data.pageNo
@@ -56,8 +58,7 @@ export default {
           this.list = [...this.list, ...res.data.data]
           if (this.total < this.pageRequest.pageSize) this.isLoading = false
           if (res.data.data.length < this.pageRequest.pageSize || (this.pageRequest.pageNo + this.pageRequest.pageSize === this.total)) this.isLoading = false
-          this.pageRequest.pageIndex = this.pageRequest.pageIndex + 1
-          this._setTimeLoading()
+          // this._setTimeLoading()
         })
       }
     },
@@ -99,13 +100,33 @@ export default {
       httpUtil.redirect(entity.id, entity.gameUrl)
     },
     _checkedColumnType (i) {
-      this.queryInfo.c = i
+      if (this.queryInfo.c !== i) {
+        this.queryInfo.c = i
+        this._resetQuery()
+        this._initData()
+      }
     },
     _checkedGameType (i) {
-      this.queryInfo.t = i
+      if (this.queryInfo.t !== i) {
+        this.queryInfo.t = i
+        this._resetQuery()
+        this._initData()
+      }
+    },
+    _onload () {
+      this.pageRequest.pageIndex += 1
+      this._initData()
+    },
+    _resetQuery () {
+      this.isLoading = true
+      this.pageRequest = { pageIndex: 1, pageNo: 0, pageSize: 10 }
+    },
+    _query () {
+      this._resetQuery()
+      this._initData()
     }
   },
   mounted () {
-    this._loading()
+    this._initData()
   }
 }
