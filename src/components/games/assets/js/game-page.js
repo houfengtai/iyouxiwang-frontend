@@ -120,6 +120,7 @@ export default {
     _resetQuery () {
       this.isLoading = true
       this.pageRequest = { pageIndex: 1, pageNo: 0, pageSize: 10 }
+      this.list = []
     },
     _query () {
       this._resetQuery()

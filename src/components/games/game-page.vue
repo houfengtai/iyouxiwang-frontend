@@ -44,9 +44,10 @@
                     <div class="intro">{{item.intro}}</div>
                 </div>
             </div>
-            <div class="more-box" @click="_onload()">
+            <div v-if="isLoading" class="more-box" @click="_onload()">
                 <div class="more">查看更多<img src="./assets/images/more.svg" /></div>
             </div>
+            <div v-if="!isLoading" class="foot-tips">-- 到底啦 --</div>
         </div>
     </div>
 </template>
