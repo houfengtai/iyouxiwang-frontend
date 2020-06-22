@@ -105,6 +105,23 @@
                     <a href="https://bbs.tianya.cn/" target="_blank">天涯社区</a>
                     <a href="https://www.zhihu.com/" target="_blank">知乎</a>
                     <a href="https://www.hupu.com/" target="_blank">虎扑</a>
+                    <a href="https://www.9game.cn/" target="_blank">九游社区</a>
+                    <a href="http://www.kugou.com/" target="_blank">酷狗音乐</a>
+                    <a href="http://www.4399.cn/" target="_blank">4399网</a>
+                    <a href="https://dl.pconline.com.cn/" target="_blank">太平洋下载</a>
+                    <a href="http://xiazai.zol.com.cn/" target="_blank">ZOL下载频道</a>
+                    <a href="https://www.uc.cn/" target="_blank">UC浏览器</a>
+                    <a href="https://www.biubiu001.com/" target="_blank">加速器</a>
+                    <a href="https://www.crsky.com/default.html" target="_blank">非凡软件</a>
+                    <a href="https://www.37.com/" target="_blank">37玩</a>
+                    <a href="https://www.duowan.com/" target="_blank">多玩</a>
+                    <a href="https://www.ithome.com/" target="_blank">IT之家</a>
+                    <a href="https://www.admin5.com/" target="_blank">创业网</a>
+                    <a href="http://games.sina.com.cn/web/" target="_blank">新浪页游</a>
+                    <a href="http://www.liuxue86.com/" target="_blank">出国留学网</a>
+                    <a href="https://www.chinaz.com/" target="_blank">站长之家</a>
+                    <a href="https://win10.ithome.com/windows10master/" target="_blank">Win10优化大师</a>
+                    <a href="https://www.25pp.com/" target="_blank">PP助手</a>
                 </div>
             </div>
         </div>
