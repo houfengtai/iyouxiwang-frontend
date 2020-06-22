@@ -65,37 +65,6 @@ export default {
     _getDateTime () {
       return dateUtil.dateFormat('hh:mm', new Date())
     },
-    // 定义 条件判断 函数
-    _calcFuc () {
-      // 获取内容真实高度
-      let cententHeight = Math.max(document.body.offsetHeight, document.body.scrollHeight)
-
-      // 获取浏览器可视高度
-      let viewHeight = window.innerHeight ||
-                document.body.clientHeight ||
-                document.documentElement.clientHeight || 0
-
-      // 获取滚动的高度
-      let scrollHeight = document.body.scrollTop ||
-                document.documentElement.scrollTop ||
-                window.pageYOffset || 0
-
-      // 获取底部隐藏的高度
-      let bottomHiddenHeight = cententHeight - viewHeight - scrollHeight
-
-      // 判断底部隐藏的高度是否小于某个值（这里设置为 10）
-      return (bottomHiddenHeight < 10)
-    },
-    _loading () {
-      if (!this._calcFuc()) {
-        this._setTimeLoading()
-      } else {
-        setTimeout(this._initData, 500)
-      }
-    },
-    _setTimeLoading () {
-      setTimeout(this._loading, 700) // 时间自定义
-    },
     _redirect (entity) {
       httpUtil.redirect(entity.id, entity.gameUrl)
     },
