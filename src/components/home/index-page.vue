@@ -34,16 +34,16 @@
                 <div class="content-sy-right">
                     <div class="col-title"><img class="rec" src="./assets/images/info.svg"><strong>游戏资讯</strong><a href="#" class="a-other">更多>></a></div>
                     <div class="sy-right-cont">
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【李逵捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【李逵劈鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【金蟾捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【大闹天宫攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【财神捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【五龙捕鱼攻略】算准时间，一发打中金龙</a></div>
+                        <div class="sy-right-cont-row"><a>【疯狂捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【3D捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【大圣捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【美人捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a>【天天捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
                     </div>
                 </div>
                 <div class="clear"></div>
