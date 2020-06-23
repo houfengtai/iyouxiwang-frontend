@@ -35,16 +35,16 @@
                 <div class="content-sy-right">
                     <div class="col-title"><img class="rec" src="./assets/images/info.svg"><strong>游戏资讯</strong><a href="#" class="a-other">更多>></a></div>
                     <div class="sy-right-cont">
-                        <div class="sy-right-cont-row"><a title="">【李逵劈鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【金蟾捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【大闹天宫攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【财神捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【五龙捕鱼攻略】算准时间，一发打中金龙</a></div>
-                        <div class="sy-right-cont-row"><a>【疯狂捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【3D捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【大圣捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【美人捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
-                        <div class="sy-right-cont-row"><a>【天天捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a title="【李逵劈鱼攻略】快速打死李逵，抢全屏炸弹">【李逵劈鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a title="【金蟾捕鱼攻略】如何才能打死金蟾？注意这几项就可以了">【金蟾捕鱼攻略】如何才能打死金蟾？注意这几项就可以了</a></div>
+                        <div class="sy-right-cont-row"><a title="【大闹天宫攻略】教你如何打悟空，抢仙桃">【大闹天宫攻略】教你如何打悟空，抢仙桃</a></div>
+                        <div class="sy-right-cont-row"><a title="【财神捕鱼攻略】怎么才能打到红包，财神如何命中？稳住才能赢">【财神捕鱼攻略】怎么才能打到红包，财神如何命中？稳住才能赢</a></div>
+                        <div class="sy-right-cont-row"><a title="【五龙捕鱼攻略】算准时间，一发打中金龙王">【五龙捕鱼攻略】算准时间，一发打中金龙王</a></div>
+                        <div class="sy-right-cont-row"><a title="【疯狂捕鱼攻略】教你打金龙鱼，炸弹海马炸全屏">【疯狂捕鱼攻略】教你打金龙鱼，炸弹海马炸全屏</a></div>
+                        <div class="sy-right-cont-row"><a title="【3D捕鱼攻略】鱼怎么都打不死？一招教你轻松上分">【3D捕鱼攻略】鱼怎么都打不死？一招教你轻松上分</a></div>
+                        <div class="sy-right-cont-row"><a title="【大圣捕鱼攻略】大圣压不住？如来神掌灭全屏">【大圣捕鱼攻略】大圣压不住？如来神掌灭全屏</a></div>
+                        <div class="sy-right-cont-row"><a title="【美人捕鱼攻略】如何低成本打到巨型美人鱼与黄金龙">【美人捕鱼攻略】如何低成本打到巨型美人鱼与黄金龙</a></div>
+                        <div class="sy-right-cont-row"><a title="【天天捕鱼攻略】轻松命中大头鱼，上分不是梦">【天天捕鱼攻略】轻松命中大头鱼，上分不是梦</a></div>
                     </div>
                 </div>
                 <div class="clear"></div>

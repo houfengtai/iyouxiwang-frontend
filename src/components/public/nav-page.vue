@@ -2,7 +2,7 @@
     <div>
         <div class="nav-box">
             <div class="nav-content">
-                <div class="web-logo">
+                <div class="web-logo" @click="_goHome">
                     <div class="size-big">爱游戏网</div>
                     <span class="size-normal">iyouxiwang.com</span>
                 </div>
@@ -33,6 +33,9 @@ export default {
   methods: {
     _goUrl (n) {
       location.href = this.urls[n].url
+    },
+    _goHome () {
+      location.href = '/index'
     }
   },
   mounted () {
@@ -53,7 +56,7 @@ export default {
     }
     .clear-back{height:0px;}
     .nav-box .nav-content{height: 60px;max-width: 800px;margin: auto;padding:0px 15px;}
-    .web-style .web-logo{ width:120px; float:left; left:-15px; }
+    .web-style .web-logo{ width:120px; float:left; left:-15px; cursor: pointer; }
     .m-style .web-logo{ width:0px; float:left; left:-15px; display: none;}
     .size-normal{ font-size: 14px; }
     .size-big{ margin-top:5px; font-size: 25px; }
