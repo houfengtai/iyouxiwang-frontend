@@ -38,7 +38,7 @@
             <div class="split-line"></div>
             <div class="data-row" v-for="item in list" :key="item.id" @click="_redirect(item)">
                 <h1>{{item.gameName}}</h1>
-                <div class="row-left"><img :src="item.gameLogo"></div>
+                <div class="row-left"><img :src="item.gameLogo" :alt="item.gameName"></div>
                 <div class="row-right">
                     <div class="row-title"><strong>{{item.gameName}}</strong><span class="time-box"></span></div>
                     <div class="intro">{{item.intro}}</div>
