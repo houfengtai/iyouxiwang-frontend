@@ -170,4 +170,5 @@ export default {
   .float-left{float:left;}
   .float-right{float:right;}
   .index-box{max-width:800px;margin:auto;padding:10px 15px;background: #fff;}
+  h1{display: none;}
 </style>

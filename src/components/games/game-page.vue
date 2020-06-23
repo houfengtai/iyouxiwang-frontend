@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>爱游戏网--棋牌、传奇、捕鱼等游戏列表</h1>
         <nav-page index="1"></nav-page>
         <div class="index-box">
                 <div v-if="isOpen">
@@ -37,7 +38,6 @@
                 </div>
             <div class="split-line"></div>
             <div class="data-row" v-for="item in list" :key="item.id" @click="_redirect(item)">
-                <h1>{{item.gameName}}</h1>
                 <div class="row-left"><img :src="item.gameLogo" :alt="item.gameName"></div>
                 <div class="row-right">
                     <div class="row-title"><strong>{{item.gameName}}</strong><span class="time-box"></span></div>

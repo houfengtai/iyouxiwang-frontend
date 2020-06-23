@@ -1,5 +1,6 @@
 <template>
     <div>
+        <h1>爱游戏网--首页</h1>
         <nav-page index="0"></nav-page>
         <div class="index-box">
             <div class="label-row">

@@ -1,7 +1,6 @@
 /** PC端样式 **/
 .web-style .index-box{max-width:800px;padding: 10px 15px;background: #fff;margin: auto;}
 .web-style .data-row{height: 70px;width:100%;margin: auto;clear: both;cursor: pointer;border-bottom: 1px dashed #aaa;}
-.web-style .data-row h1{display: none;}
 .web-style .data-row .row-left{height: 60px;width:60px;margin: 5px 15px 5px 0;float:left;border-radius: 10px;}
 .web-style .data-row .row-left img{width: 60px;height:60px;border-radius: 10px;}
 .web-style .data-row .row-right{height: 70px;width:calc(100% - 75px);float:left;}
@@ -15,7 +14,7 @@
   font-size: 14px;
 }
 .web-style .data-row .row-right .row-title strong{
-  height:35px;line-height: 35px;font-size: 16px;
+  height:35px;line-height: 35px;font-size: 14px;
 }
 .web-style .data-row .row-right .time-box{float: right;color:red;}
 .web-style .label-row{clear: both;min-height:35px;}
@@ -52,7 +51,7 @@
   font-size: 14px;
 }
 .m-style .data-row .row-right .row-title strong{
-  height:35px;line-height: 35px;font-size: 16px;
+  height:35px;line-height: 35px;font-size: 14px;
 }
 .m-style .m-top{height:40px;}
 .m-style .data-row .row-right .time-box{float: right;color:red;}
