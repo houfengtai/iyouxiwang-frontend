@@ -4,6 +4,18 @@ import NavPage from '@/components/public/nav-page'
 export default {
   name: 'index-page',
   components: { NavPage },
+  metaInfo: {
+    title: '[爱游戏网]一个专注于各类娱乐、传奇、仙侠、端游、页游等公服和私服游戏收集网站',
+    meta: [{
+      name: 'keywords',
+      content: '爱游戏网,iyouxiwang.com,棋牌,捕鱼,传奇,私服,月入百万,游戏,赚钱,手游,网游,游戏大全,优质游戏'
+    },
+    {
+      name: 'description',
+      content: '爱游戏网--一个专注于棋牌、传奇私服等游戏收集大全网站'
+    }
+    ]
+  },
   data () {
     return {
       newList: [],

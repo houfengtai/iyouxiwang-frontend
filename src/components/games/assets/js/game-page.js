@@ -6,11 +6,16 @@ export default {
   name: 'game-page',
   components: { NavPage },
   metaInfo: {
-    title: '【爱游戏网】一个专注于各类娱乐|传奇|仙侠|端游|页游等公服和私服游戏收集网站',
+    title: '[爱游戏网]--捕鱼、棋牌、传奇等游戏列表',
     meta: [{
       name: 'keywords',
-      content: '爱游戏网,iyouxiwang.com,iyouxiwang,捕鱼,传奇,私服,月入百万,游戏,赚钱,手游,网游,游戏大全,优质游戏'
-    }]
+      content: '爱游戏网,iyouxiwang.com,棋牌,捕鱼,传奇,私服,月入百万,游戏,赚钱,手游,网游,游戏大全,优质游戏'
+    },
+    {
+      name: 'description',
+      content: '爱游戏网,iyouxiwang.com,棋牌,捕鱼,传奇,私服,月入百万,游戏,赚钱,手游,网游,游戏大全,优质游戏'
+    }
+    ]
   },
   data () {
     return {
@@ -58,7 +63,6 @@ export default {
           this.list = [...this.list, ...res.data.data]
           if (this.total < this.pageRequest.pageSize) this.isLoading = false
           if (res.data.data.length < this.pageRequest.pageSize || (this.pageRequest.pageNo + this.pageRequest.pageSize === this.total)) this.isLoading = false
-          // this._setTimeLoading()
         })
       }
     },
