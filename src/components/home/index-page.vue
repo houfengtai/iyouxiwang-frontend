@@ -26,7 +26,7 @@
                     <div class="col-title"><img class="rec" src="./assets/images/rec.svg"><strong>手游推荐</strong><a href="#" class="a-other">更多>></a></div>
                     <div class="sy-left-cont">
                         <div v-for="entity in recommendList" :key="entity.id" class="rec-box" @click="_redirect(entity)">
-                            <img :src="entity.gameLogo">
+                            <img :src="entity.gameLogo" :alt="entity.gameName">
                             <div><strong>{{entity.gameName}}</strong></div>
                         </div>
                     </div>
@@ -34,7 +34,7 @@
                 <div class="content-sy-right">
                     <div class="col-title"><img class="rec" src="./assets/images/info.svg"><strong>游戏资讯</strong><a href="#" class="a-other">更多>></a></div>
                     <div class="sy-right-cont">
-                        <div class="sy-right-cont-row"><a>【李逵劈鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
+                        <div class="sy-right-cont-row"><a title="">【李逵劈鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
                         <div class="sy-right-cont-row"><a>【金蟾捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
                         <div class="sy-right-cont-row"><a>【大闹天宫攻略】快速打死李逵，抢全屏炸弹</a></div>
                         <div class="sy-right-cont-row"><a>【财神捕鱼攻略】快速打死李逵，抢全屏炸弹</a></div>
@@ -54,24 +54,22 @@
             <div class="margin-top10 col-title"><img class="rec" src="./assets/images/classify.svg"><strong>游戏分类</strong><a href="/games" class="a-other">更多>></a></div>
             <div class="content-type">
                 <div class="con-type-title">
-                    <div>休闲棋牌</div>
-                    <div>传奇</div>
+                    <div title="休闲棋牌">休闲棋牌</div>
+                    <div title="传奇">传奇</div>
                 </div>
                 <div class="con-type-row">
                     <div class="con-type-row-left" @click="_redirect(typeGame.qp)">
-                        <div class="con-type-row-img-box float-left"><img class="game-log" width="60" height="60" :src="typeGame.qp.gameLogo"></div>
+                        <div class="con-type-row-img-box float-left"><img class="game-log" width="60" height="60" :src="typeGame.qp.gameLogo" :alt="typeGame.qp.gameName"></div>
                         <div class="con-type-row-title-box float-left">
                             <div><strong>{{typeGame.qp.gameName}}</strong></div>
                             <div>{{typeGame.qp.intro}}</div>
-                            <div>2020-05-19</div>
                         </div>
                     </div>
                     <div  class="con-type-row-right" @click="_redirect(typeGame.cq)">
-                        <div class="con-type-row-img-box float-left"><img class="game-log float-left" width="60" height="60" :src="typeGame.cq.gameLogo"></div>
+                        <div class="con-type-row-img-box float-left"><img class="game-log float-left" width="60" height="60" :src="typeGame.cq.gameLogo" :alt="typeGame.cq.gameName"></div>
                         <div class="con-type-row-title-box float-left">
                             <div><strong>{{typeGame.cq.gameName}}</strong></div>
                             <div>{{typeGame.cq.intro}}</div>
-                            <div>2020-05-19</div>
                         </div>
                     </div>
                     <div class="clear"></div>
@@ -82,46 +80,47 @@
                 <strong>荣誉墙</strong>
             </div>
             <div class="game-img-box">
-                <img v-for="(e,i) in views.images" :key="e.id" :src="e.resourceUrl" :title="e.remark" ref="honor" @click="_enlargement(i)">
+                <img v-for="(e,i) in views.images" :key="e.id" :src="e.resourceUrl" :alt="e.remark" :title="e.remark" ref="honor" @click="_enlargement(i)">
             </div>
             <div class="margin-top10 col-title">
                 <img class="rec" src="./assets/images/video.svg">
                 <strong>高光操作</strong>
             </div>
             <div class="video-box">
-                <video v-for="e in views.videos" :key="e.id" controls controlslist="nodownload noremoteplayback" ref="video" disablePictureInPicture="true">
+                <video v-for="e in views.videos" :key="e.id" :title="e.remark" controls controlslist="nodownload noremoteplayback" ref="video" disablePictureInPicture="true">
                     <source :src="e.resourceUrl" type="video/mp4">
                 </video>
             </div>
             <div class="external-link">
                 <div class="el-row"><strong>友情链接>></strong></div>
                 <div class="el-link-box">
-                    <a href="https://www.douyu.com/" target="_blank">斗鱼</a>
-                    <a href="https://www.bilibili.com/" target="_blank">哔哩哔哩</a>
-                    <a href="https://www.huya.com/" target="_blank">虎牙</a>
-                    <a href="https://weibo.com/" target="_blank">新浪微博</a>
-                    <a href="https://www.baidu.com/" target="_blank">百度</a>
-                    <a href="https://www.taobao.com/" target="_blank">淘宝</a>
-                    <a href="https://bbs.tianya.cn/" target="_blank">天涯社区</a>
-                    <a href="https://www.zhihu.com/" target="_blank">知乎</a>
-                    <a href="https://www.hupu.com/" target="_blank">虎扑</a>
-                    <a href="https://www.9game.cn/" target="_blank">九游社区</a>
-                    <a href="http://www.kugou.com/" target="_blank">酷狗音乐</a>
-                    <a href="http://www.4399.cn/" target="_blank">4399网</a>
-                    <a href="https://dl.pconline.com.cn/" target="_blank">太平洋下载</a>
-                    <a href="http://xiazai.zol.com.cn/" target="_blank">ZOL下载频道</a>
-                    <a href="https://www.uc.cn/" target="_blank">UC浏览器</a>
-                    <a href="https://www.biubiu001.com/" target="_blank">加速器</a>
-                    <a href="https://www.crsky.com/default.html" target="_blank">非凡软件</a>
-                    <a href="https://www.37.com/" target="_blank">37玩</a>
-                    <a href="https://www.duowan.com/" target="_blank">多玩</a>
-                    <a href="https://www.ithome.com/" target="_blank">IT之家</a>
-                    <a href="https://www.admin5.com/" target="_blank">创业网</a>
-                    <a href="http://games.sina.com.cn/web/" target="_blank">新浪页游</a>
-                    <a href="http://www.liuxue86.com/" target="_blank">出国留学网</a>
-                    <a href="https://www.chinaz.com/" target="_blank">站长之家</a>
-                    <a href="https://win10.ithome.com/windows10master/" target="_blank">Win10优化大师</a>
-                    <a href="https://www.25pp.com/" target="_blank">PP助手</a>
+                    <a href="https://www.douyu.com/" title="斗鱼" target="_blank">斗鱼</a>
+                    <a href="https://www.bilibili.com/" title="哔哩哔哩" target="_blank">哔哩哔哩</a>
+                    <a href="https://www.huya.com/" title="虎牙" target="_blank">虎牙</a>
+                    <a href="https://weibo.com/" title="新浪微博" target="_blank">新浪微博</a>
+                    <a href="https://www.baidu.com/" title="百度" target="_blank">百度</a>
+                    <a href="https://www.taobao.com/" title="淘宝" target="_blank">淘宝</a>
+                    <a href="https://bbs.tianya.cn/" title="天涯社区" target="_blank">天涯社区</a>
+                    <a href="https://www.zhihu.com/" title="知乎" target="_blank">知乎</a>
+                    <a href="https://www.hupu.com/" title="虎扑" target="_blank">虎扑</a>
+                    <a href="https://www.douyin.com/" title="抖音" target="_blank">抖音</a>
+                    <a href="https://www.9game.cn/" title="九游社区" target="_blank">九游社区</a>
+                    <a href="http://www.kugou.com/" title="酷狗音乐" target="_blank">酷狗音乐</a>
+                    <a href="http://www.4399.cn/" title="4399网" target="_blank">4399网</a>
+                    <a href="https://dl.pconline.com.cn/" title="太平洋下载" target="_blank">太平洋下载</a>
+                    <a href="http://xiazai.zol.com.cn/" title="ZOL下载频道" target="_blank">ZOL下载频道</a>
+                    <a href="https://www.uc.cn/" title="UC浏览器" target="_blank">UC浏览器</a>
+                    <a href="https://www.biubiu001.com/" title="加速器" target="_blank">加速器</a>
+                    <a href="https://www.crsky.com/default.html" title="非凡软件" target="_blank">非凡软件</a>
+                    <a href="https://www.37.com/" title="37玩" target="_blank">37玩</a>
+                    <a href="https://www.duowan.com/" title="多玩" target="_blank">多玩</a>
+                    <a href="https://www.ithome.com/" title="IT之家" target="_blank">IT之家</a>
+                    <a href="https://www.admin5.com/" title="创业网" target="_blank">创业网</a>
+                    <a href="http://games.sina.com.cn/web/" title="新浪页游" target="_blank">新浪页游</a>
+                    <a href="http://www.liuxue86.com/" title="出国留学网" target="_blank">出国留学网</a>
+                    <a href="https://www.chinaz.com/" title="站长之家" target="_blank">站长之家</a>
+                    <a href="https://win10.ithome.com/windows10master/" title="Win10优化大师" target="_blank">Win10优化大师</a>
+                    <a href="https://www.25pp.com/" title="PP助手" target="_blank">PP助手</a>
                 </div>
             </div>
         </div>
