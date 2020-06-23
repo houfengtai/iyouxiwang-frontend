@@ -36,7 +36,7 @@ module.exports = {
           // 这个目录只能有一级，如果目录层次大于一级，在生成的时候不会有任何错误提示，在预渲染的时候只会卡着不动。
           staticDir: path.join(__dirname, 'dist'),
           // 对应自己的路由文件，比如a有参数，就需要写成 /a/param1。
-          routes: ['/', '/index'],
+          routes: ['/', '/index', '/games'],
           postProcess (renderedRoute) {
             renderedRoute.route = renderedRoute.originalRoute
             renderedRoute.html = renderedRoute.html
