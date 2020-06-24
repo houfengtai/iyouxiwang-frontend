@@ -50,7 +50,7 @@
                 <div class="clear"></div>
             </div>
             <div class="big-logo">
-                <img src="/images/big-qiushenjindi.png">
+                <img src="/images/big-xianglongmeiying.png" alt="祥龙魅影" @click="_redirectById(25,'http://www3.116kl.top:9955')">
             </div>
             <div class="margin-top10 col-title"><img class="rec" src="./assets/images/classify.svg"><strong>游戏分类</strong><a href="/games" class="a-other">更多>></a></div>
             <div class="content-type">

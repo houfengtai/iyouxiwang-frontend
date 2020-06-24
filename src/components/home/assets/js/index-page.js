@@ -60,6 +60,9 @@ export default {
     _redirect (entity) {
       httpUtil.redirect(entity.id, entity.gameUrl)
     },
+    _redirectById (id, gameUrl) {
+      httpUtil.redirect(id, gameUrl)
+    },
     _enlargement (i) {
       const honors = this.$refs.honor
       if (honors[i].width === 800) {
