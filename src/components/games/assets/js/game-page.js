@@ -75,16 +75,16 @@ export default {
     _checkedColumnType (i) {
       if (this.queryInfo.c !== i) {
         this.queryInfo.c = i
-        this._resetQuery()
-        this._initData()
-      }
+      } else this.queryInfo.c = null
+      this._resetQuery()
+      this._initData()
     },
     _checkedGameType (i) {
       if (this.queryInfo.t !== i) {
         this.queryInfo.t = i
-        this._resetQuery()
-        this._initData()
-      }
+      } else this.queryInfo.t = null
+      this._resetQuery()
+      this._initData()
     },
     _onload () {
       this.pageRequest.pageIndex += 1
